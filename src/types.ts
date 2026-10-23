@@ -1,4 +1,5 @@
 export interface Project {
+ section:string; subject:string; imageUrl?:string; imageAlt?:string; imageCaption?:string;
  activities?:Project[];
  datasetNote?:string; datasetSources?:{label:string;url:string}[]; demonstrationUrl?:string;
  id:string; title:string; domains:string[]; categories:string[]; technologies:string[];

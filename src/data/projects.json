@@ -52,7 +52,9 @@
     "documentationUrl": "./documentation/traffic-signs.md",
     "course": null,
     "datasetNote": "Roboflow training/validation images and a separate Road Signs test dataset. Exact source versions and links are not verified; dataset files are not redistributed.",
-    "demonstrationUrl": "https://drive.google.com/file/d/193ewY228nIQ413k8zm9QLgmNbJ_VDMAY/view?usp=drivesdk"
+    "demonstrationUrl": "https://drive.google.com/file/d/193ewY228nIQ413k8zm9QLgmNbJ_VDMAY/view?usp=drivesdk",
+    "section": "Featured Projects",
+    "subject": "Computer Vision"
   },
   {
     "id": "fish-ann",
@@ -112,7 +114,9 @@
         "url": "https://www.kaggle.com/datasets/crowww/a-large-scale-fish-dataset"
       }
     ],
-    "datasetNote": "Images are not redistributed. Dataset terms and image attribution require review."
+    "datasetNote": "Images are not redistributed. Dataset terms and image attribution require review.",
+    "section": "Featured Projects",
+    "subject": "Computer Vision"
   },
   {
     "id": "image-compression",
@@ -168,7 +172,9 @@
         "url": "https://r0k.us/graphics/kodak/index.html"
       }
     ],
-    "datasetNote": "Five photographic inputs were identified in the Kodak collection; detailed credits are in the repository README. Input images are excluded because applicable redistribution rights remain unresolved."
+    "datasetNote": "Five photographic inputs were identified in the Kodak collection; detailed credits are in the repository README. Input images are excluded because applicable redistribution rights remain unresolved.",
+    "section": "Featured Projects",
+    "subject": "Computer Vision"
   },
   {
     "id": "coin-edges",
@@ -213,7 +219,9 @@
     "sourceStatus": "Public repository verified on 23 October 2026.",
     "documentationUrl": "./documentation/coin-edges.md",
     "course": "Digital Image Processing",
-    "datasetNote": "Original remote image provenance and redistribution permission are unresolved. No private image URL or sample image is included."
+    "datasetNote": "Original remote image provenance and redistribution permission are unresolved. No private image URL or sample image is included.",
+    "section": "Featured Projects",
+    "subject": "Computer Vision"
   },
   {
     "id": "eduroom",
@@ -261,6 +269,335 @@
     "sourceStatus": "Public repository verified on 23 October 2026.",
     "documentationUrl": "./documentation/eduroom.md",
     "course": null,
-    "demonstrationUrl": "https://youtu.be/2j4AlsXVCxc"
+    "demonstrationUrl": "https://youtu.be/2j4AlsXVCxc",
+    "section": "Collaborative Projects",
+    "subject": "Software Development"
+  },
+  {
+    "id": "line-follower",
+    "title": "Robopuff: Line Follower Robot",
+    "section": "Collaborative Projects",
+    "subject": "Robotics",
+    "domains": [
+      "Robotics"
+    ],
+    "categories": [
+      "Robotics"
+    ],
+    "technologies": [
+      "Arduino C++",
+      "Digital line sensors",
+      "PWM motor control"
+    ],
+    "methods": [
+      "Five active-low digital inputs on A0–A4 are sampled every 50 ms using millis().",
+      "Center detection, or both near-side sensors, selects forward motion; left/right detection selects a pivot turn.",
+      "Motor direction pins 8–11 and PWM pins 3/5 control two drive sides; serial output reports sensor state and direction."
+    ],
+    "features": [
+      "Five sensor inputs",
+      "Forward/left/right motion",
+      "Serial diagnostics"
+    ],
+    "summary": "A collaborative Arduino robot controller using five digital line-sensor inputs and differential motor steering.",
+    "results": [
+      "Source implements forward motion at PWM 140 and asymmetric turning at PWM 80/100. These are control settings, not measured speed.",
+      "An actual prototype photograph and a local demonstration video are available. No lap time, tracking accuracy or success-rate measurement is documented."
+    ],
+    "limitations": [
+      "No explicit stop or recovery branch when all sensors lose the line; the previous motor command persists.",
+      "The supplied photograph shows an ultrasonic/servo-equipped prototype; the five line-sensor array and exact wiring are not visible, so the photo does not verify the firmware hardware configuration.",
+      "Individual responsibilities are not documented in the supplied source. Video participant permissions are unconfirmed."
+    ],
+    "attribution": "Collaborative academic project by Tischia Ann Olivares, Michelle Tercero and Rona Mae Quite, confirmed by the author. Individual task assignments are not documented.",
+    "concerns": [
+      "Robopuff/team attribution and video participant permission need confirmation."
+    ],
+    "placement": "featured",
+    "kind": "project",
+    "status": "Academic project",
+    "evidence": "Historical saved results and source inspection; experiments and hardware were not rerun.",
+    "repositoryUrl": "https://github.com/chiaseedss/robopuff-line-follower",
+    "sourceStatus": "Public repository verified on 24 October 2026.",
+    "documentationUrl": "./documentation/line-follower.md",
+    "course": null,
+    "imageUrl": "./images/line-follower.jpg",
+    "imageAlt": "Supplied Robopuff prototype photograph showing a wheeled chassis, ultrasonic module and servo.",
+    "imageCaption": "Photograph supplied in the line-follower project folder. The five line sensors and firmware wiring are not visible."
+  },
+  {
+    "id": "obstacle-avoidance",
+    "title": "Fuzzy Logic Obstacle Avoidance Robot",
+    "section": "Collaborative Projects",
+    "subject": "Robotics",
+    "domains": [
+      "Robotics",
+      "AI/ML"
+    ],
+    "categories": [
+      "Robotics"
+    ],
+    "technologies": [
+      "Arduino C++",
+      "NewPing",
+      "Servo",
+      "Fuzzy.h",
+      "Ultrasonic sensors"
+    ],
+    "methods": [
+      "Single-sensor version scans left/right with a servo and computes near/far memberships over the 20–50 cm transition. A dominant-rule function returns a direction.",
+      "Three-sensor version uses NewPing for left/front/right ranges, Fuzzy.h memberships and four rules; defuzzification selects forward, turn, reverse or stop branches.",
+      "Three-sensor code maps no-echo readings to 200 cm and updates after a 300 ms delay. Two PWM motor channels drive the chassis."
+    ],
+    "features": [
+      "Servo-scanned one-sensor variant",
+      "Three-sensor variant",
+      "Forward/reverse/turn control"
+    ],
+    "summary": "Two Arduino implementations of reactive obstacle avoidance: a servo-scanned single ultrasonic sensor and a three-sensor fuzzy controller.",
+    "results": [
+      "Two separate source implementations define distance-based motor control. The provided photograph shows three forward-facing ultrasonic modules.",
+      "A local group video exists; no quantified collision rate, route-completion rate or navigation-time benchmark is documented."
+    ],
+    "limitations": [
+      "In the single-sensor caller, every fuzzy decision other than RIGHT becomes a left turn, including FORWARD and REVERSE.",
+      "PWM use on A3/A4 in the single-sensor sketch needs checking against the actual board; no-echo-as-far behavior needs hardware testing.",
+      "Individual roles are not stated in the available source files. Video sharing rights and participant permissions are unconfirmed."
+    ],
+    "attribution": "Collaborative academic project by Tischia Ann Olivares, Michelle Tercero and Rona Mae Quite, confirmed by the author. Individual task assignments are not documented.",
+    "concerns": [
+      "Group 11 ownership and participant consent require review."
+    ],
+    "placement": "featured",
+    "kind": "project",
+    "status": "Academic project",
+    "evidence": "Historical saved results and source inspection; experiments and hardware were not rerun.",
+    "repositoryUrl": "https://github.com/chiaseedss/fuzzy-obstacle-avoidance",
+    "sourceStatus": "Public repository verified on 24 October 2026.",
+    "documentationUrl": "./documentation/obstacle-avoidance.md",
+    "course": null,
+    "imageUrl": "./images/obstacle-avoidance.jpg",
+    "imageAlt": "Actual obstacle-avoidance robot with three ultrasonic modules on a wheeled chassis.",
+    "imageCaption": "Supplied project photograph of the three-ultrasonic-sensor prototype."
+  },
+  {
+    "id": "farmers-market",
+    "title": "Farmers Market Management System",
+    "section": "Collaborative Projects",
+    "subject": "Software Development",
+    "domains": [
+      "Software Engineering"
+    ],
+    "categories": [
+      "Software Development"
+    ],
+    "technologies": [
+      "Python",
+      "Flask",
+      "MySQL",
+      "Jinja/HTML"
+    ],
+    "methods": [
+      "Flask routes and Jinja templates implement administrative CRUD and a customer ordering interface.",
+      "MySQL relations store vendors, products, inventory and orders; SQL queries support search and available-stock views.",
+      "Database configuration is read from environment variables."
+    ],
+    "features": [
+      "Centralize vendor, product, stock and order records",
+      "Support customer purchasing and digital receipts"
+    ],
+    "summary": "A Flask/MySQL application for vendor, product, inventory and order administration with customer purchasing and receipts.",
+    "results": [
+      "Source routes, schema and templates implement core management and receipt workflows. No automated execution result or production benchmark is documented."
+    ],
+    "limitations": [
+      "The report describes Flask-Login, role checks and penetration-test objectives, but these controls and test results are not established by the inspected source. They are not claimed as verified implemented security features.",
+      "Deletion routes use GET; authentication and CSRF protection need further work. Personal seed data and credentials are excluded."
+    ],
+    "attribution": "Sean Xander B. Aquino — MySQL schema, database connection module, initial Flask routes and templates; Remar F. Malanon — documentation and presentation introduction; Tischia Ann R. Olivares — application structure, additional features, completed frontend, remaining backend logic, documentation editing and installation demonstration. Roles are documented in the project report.",
+    "concerns": [
+      "Review SQL initial_data.sql for names/contact details and confirm team ownership."
+    ],
+    "placement": "secondary",
+    "kind": "project",
+    "status": "Academic project",
+    "evidence": "Historical saved results and source inspection; experiments and hardware were not rerun.",
+    "repositoryUrl": "https://github.com/chiaseedss/farmers-market-system",
+    "sourceStatus": "Source availability pending or restricted; no public repository verified.",
+    "documentationUrl": "./documentation/farmers-market.md",
+    "course": null,
+    "demonstrationUrl": "https://youtu.be/6BlimJCzyPs"
+  },
+  {
+    "id": "fashion-cnn",
+    "title": "Fashion-MNIST CNN Optimizer Comparison",
+    "section": "Other Coursework",
+    "subject": "Artificial Intelligence and Machine Learning",
+    "domains": [
+      "Computer Vision",
+      "AI/ML"
+    ],
+    "categories": [
+      "Artificial Intelligence and Machine Learning"
+    ],
+    "technologies": [
+      "Python",
+      "TensorFlow/Keras",
+      "NumPy",
+      "Matplotlib"
+    ],
+    "methods": [
+      "Normalize 28×28 grayscale inputs and add a channel dimension.",
+      "Three Conv2D layers (64/128/256 filters, 5×5, same padding) alternate with max pooling; Flatten, Dense(256) and a ten-class softmax complete the model.",
+      "Each optimizer uses learning rate 0.001, 10 epochs, batch size 32 and validation_split=0.33; SGD uses momentum 0.9."
+    ],
+    "features": [
+      "Same CNN with three optimizers",
+      "Training curves",
+      "Sample prediction comparison"
+    ],
+    "summary": "A comparison of SGD with momentum, Adam and RMSProp on a shared CNN architecture for ten-class Fashion-MNIST classification.",
+    "results": [
+      "Historical model.evaluate test accuracy: SGD 0.8850; Adam 0.9047; RMSProp 0.9013.",
+      "Training/validation curves and sampled prediction comparisons are saved in the original notebook."
+    ],
+    "limitations": [
+      "Single runs do not establish multi-seed uncertainty or optimizer superiority across settings."
+    ],
+    "attribution": "Tischia Ann R. Olivares — Individual Academic Project; sole author named in the project report.",
+    "concerns": [
+      "Verify dataset terms and report attribution."
+    ],
+    "placement": "secondary",
+    "kind": "project",
+    "status": "Academic project",
+    "evidence": "Historical saved results and source inspection; experiments and hardware were not rerun.",
+    "repositoryUrl": "https://github.com/chiaseedss/fashion-mnist-optimizer-comparison",
+    "sourceStatus": "Public repository verified on 24 October 2026.",
+    "documentationUrl": "./documentation/fashion-cnn.md",
+    "course": null,
+    "datasetSources": [
+      {
+        "label": "Fashion-MNIST — Zalando Research",
+        "url": "https://github.com/zalandoresearch/fashion-mnist"
+      }
+    ],
+    "datasetNote": "Loaded using Keras. Dataset images and saved media are not redistributed in the prepared package."
+  },
+  {
+    "id": "crop-yield",
+    "title": "Climate-Based Crop Yield Estimation Using Artificial Neural Networks",
+    "section": "Other Coursework",
+    "subject": "Machine Learning",
+    "domains": [
+      "AI/ML"
+    ],
+    "categories": [
+      "Machine Learning"
+    ],
+    "technologies": [
+      "Python",
+      "TensorFlow/Keras",
+      "pandas",
+      "NumPy",
+      "scikit-learn",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "methods": [
+      "The report describes a synthetic 10,000-row Climate Change Impact on Agriculture dataset; source drops missing rows and selects four climate features.",
+      "Dense 128 → 64 → 32 ReLU layers with dropout 0.4/0.3 and a linear scalar output; Adam, MSE loss, batch size 32 and up to 100 epochs.",
+      "An 80/20 split reserves test data; the remaining training portion is split again for validation (64/16/20 overall). Early stopping uses validation loss with patience 10.",
+      "The notebook compares the ANN with linear regression and random forest, and includes correlation plots and prediction examples."
+    ],
+    "features": [
+      "Explore relationships between temperature, precipitation, CO₂ emissions and extreme-weather events",
+      "Train an ANN to estimate crop yield in metric tons per hectare",
+      "Compare historical ANN performance with linear regression and random forest"
+    ],
+    "summary": "A feedforward neural-network regression study estimating crop yield from four climate-related variables on synthetic agricultural data.",
+    "results": [
+      "Report and saved notebook — ANN test MAE 0.7285 MT/ha, RMSE 0.8594 MT/ha and R² 0.3003.",
+      "Saved notebook comparison — random forest: MAE 0.746094, RMSE 0.888529, R² 0.252008; linear regression: MAE 0.814171, RMSE 0.992408, R² 0.066889.",
+      "The ANN explains approximately 30% of the target variance in this saved synthetic-data test; no field deployment or real-farm validation is documented."
+    ],
+    "limitations": [
+      "The dataset is synthetic; results do not establish generalization to real farms or future climate conditions.",
+      "StandardScaler is fit before train/test splitting in the source, exposing preprocessing to test-distribution information. The historical metrics are retained with this limitation.",
+      "Only one saved split is shown; limited explained variance and no cross-validation constrain conclusions.",
+      "Agricultural planning applications discussed in the report are prospective uses, not implemented operational decision-support features."
+    ],
+    "attribution": "Tischia Ann R. Olivares — Individual Academic Project; sole author identified in the final Machine Learning report.",
+    "concerns": [
+      "Synthetic data and preprocessing leakage limit interpretation."
+    ],
+    "placement": "secondary",
+    "kind": "research project",
+    "status": "Academic regression study",
+    "evidence": "Historical report and notebook metrics agree; no model training or experiments rerun.",
+    "repositoryUrl": "https://github.com/chiaseedss/climate-based-crop-yield-estimation",
+    "sourceStatus": "Public repository verified on 24 October 2026.",
+    "documentationUrl": "./documentation/crop-yield.md",
+    "course": "CSAC 224 — Machine Learning",
+    "datasetSources": [
+      {
+        "label": "Climate Change Impact on Agriculture — Kaggle",
+        "url": "https://www.kaggle.com/datasets/waqi786/climate-change-impact-on-agriculture"
+      }
+    ],
+    "datasetNote": "The report identifies a synthetic 10,000-sample Kaggle dataset. Dataset files are not redistributed; obtain the source under its applicable terms."
+  },
+  {
+    "id": "weather-app",
+    "title": "Weather Application",
+    "section": "Other Coursework",
+    "subject": "Application Development",
+    "domains": [
+      "Software Engineering"
+    ],
+    "categories": [
+      "Application Development"
+    ],
+    "technologies": [
+      "Python",
+      "Flet",
+      "HTTPX",
+      "python-dotenv",
+      "OpenWeatherMap"
+    ],
+    "methods": [
+      "Separate configuration and HTTPX service modules read OpenWeatherMap credentials from environment variables.",
+      "Asynchronous requests retrieve current conditions and forecasts; UI handles city errors, theme and unit controls.",
+      "Local history is stored as JSON; no private history or location screenshots are included."
+    ],
+    "features": [
+      "City/location weather",
+      "Five-day forecast",
+      "History",
+      "Theme toggle",
+      "Error handling"
+    ],
+    "summary": "A Flet application that presents city/location weather, forecasts and search history through an asynchronous weather-service layer.",
+    "results": [
+      "Source implements weather display, forecasts, history, error handling and theme controls. A service test script is provided.",
+      "No live API calls or service tests were run for this portfolio update."
+    ],
+    "limitations": [
+      "An API key is required privately; .env, history and location-bearing screenshots are excluded.",
+      "Configuration validates the API key at import time; network features depend on external service availability."
+    ],
+    "attribution": "Tischia Ann R. Olivares — individual academic coursework, explicitly identified by the original lab README.",
+    "concerns": [
+      "Local .env exists and must remain private; key validity not tested.",
+      "README contains student identifier; screenshots/history may reveal location."
+    ],
+    "placement": "secondary",
+    "kind": "project",
+    "status": "Academic project",
+    "evidence": "Historical saved results and source inspection; experiments and hardware were not rerun.",
+    "repositoryUrl": "https://github.com/chiaseedss/cccs106-projects/tree/main/mod6_labs/weather_app",
+    "sourceStatus": "Source availability pending or restricted; no public repository verified.",
+    "documentationUrl": "./documentation/weather-app.md",
+    "course": null
   }
 ]
