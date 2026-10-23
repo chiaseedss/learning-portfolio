@@ -7,7 +7,7 @@ Welcome to my Learning Portfolio. This repository contains a website that brings
 
 The portfolio presents each project in context—what it aims to accomplish, the methods and technologies used, and the results or outputs produced. It also provides links to the corresponding GitHub repositories for source code and more detailed documentation.
 
-**[View the Learning Portfolio](https://chiaseedss.github.io/learning-portfolio/)**
+[![Portfolio](https://img.shields.io/badge/Live_Demo-View_Learning_Portfolio-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://chiaseedss.github.io/learning-portfolio/)
 
 ## Featured Projects
 
