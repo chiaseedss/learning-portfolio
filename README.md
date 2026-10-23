@@ -1,53 +1,64 @@
 # Learning Portfolio
 
-An academic Computer Science portfolio by Tischia Ann R. Olivares, presenting eleven projects across Computer Vision, collaborative systems and robotics, Artificial Intelligence, Machine Learning and Application Development. Detail pages explain objectives, methods, documented results, limitations and contributors.
+**Tischia Ann R. Olivares**  
+Bachelor of Science in Computer Science
 
-[**View My Learning Portfolio**](https://chiaseedss.github.io/learning-portfolio/)
+Welcome to my Learning Portfolio. This repository contains a website that brings together selected academic projects, experiments, and practical work from my Computer Science studies. This was organized for my Computer Vision course and also reflects skills that I developed in other areas of computing.
 
-The live site is available at this address. This final selection is prepared locally and requires the updated website files to be uploaded before it appears online.
+The portfolio presents each project in context—what it aims to accomplish, the methods and technologies used, and the results or outputs produced. It also provides links to the corresponding GitHub repositories for source code and more detailed documentation.
 
-## Featured Projects (4)
+[![Portfolio](https://img.shields.io/badge/Live_Demo-View_Learning_Portfolio-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://chiaseedss.github.io/learning-portfolio/)
 
-- [Philippine traffic sign detection](https://github.com/chiaseedss/philippine-traffic-sign-detection) — YOLOv8n detection of five Philippine traffic-sign classes, with validation and external-dataset evaluation.
-- [Fish classification and image resolution experiment](https://github.com/chiaseedss/fish-classification-resolution-study) — Nine-class fish classification comparing three image resolutions using a dense neural network, rather than a CNN.
-- [Image compression and quality retention study](https://github.com/chiaseedss/image-compression-quality-study) — Comparison of JPEG, WebP and PNG encoding across 20 images using size, encoding time, PSNR and SSIM.
-- [Coin image preprocessing and edge detection](https://github.com/chiaseedss/coin-image-preprocessing) — Classical image preprocessing and Sobel gradients for emphasizing coin boundaries; no denomination classification or automatic counting.
+## Featured Projects
 
-## Collaborative Projects (4)
+### Computer Vision & Digital Image Processing
 
-- [EduROOM classroom reservation system](https://github.com/tbhcoding/EduROOM) — Team-developed classroom reservation and scheduling application using Python, Flet, MySQL, WebSockets and Microsoft Azure.
-- [Robopuff: Line Follower Robot](https://github.com/chiaseedss/robopuff-line-follower) — A collaborative Arduino robot controller using five digital line-sensor inputs and differential motor steering.
-- [Fuzzy Logic Obstacle Avoidance Robot](https://github.com/chiaseedss/fuzzy-obstacle-avoidance) — Two Arduino implementations of reactive obstacle avoidance: a servo-scanned single ultrasonic sensor and a three-sensor fuzzy controller.
-- [Farmers Market Management System](https://github.com/chiaseedss/farmers-market-system) — A Flask/MySQL application for vendor, product, inventory and order administration with customer purchasing and receipts.
+| Project | Description |
+| --- | --- |
+| [Philippine Traffic Sign Detection](https://github.com/chiaseedss/philippine-traffic-sign-detection) | Detects and recognizes five Philippine traffic-sign classes using YOLOv8n, with validation and external-test evaluation. |
+| [Fish Classification and Image Resolution Study](https://github.com/chiaseedss/fish-classification-resolution-study) | Examines nine-class fish classification using a dense neural network and compares the effects of input image resolution. |
+| [Image Compression and Quality Retention](https://github.com/chiaseedss/image-compression-quality-study) | Compares JPEG, WebP, and PNG using file size, encoding time, PSNR, and SSIM to study quality–efficiency trade-offs. |
+| [Coin Image Preprocessing](https://github.com/chiaseedss/coin-image-preprocessing) | Demonstrates filtering, sharpening, Sobel edge detection, and thresholding to enhance coin boundaries. |
 
-## Other Coursework (3)
+### Robotics
 
-- [Fashion-MNIST CNN Optimizer Comparison](https://github.com/chiaseedss/fashion-mnist-optimizer-comparison) — A comparison of SGD with momentum, Adam and RMSProp on a shared CNN architecture for ten-class Fashion-MNIST classification.
-- [Climate-Based Crop Yield Estimation Using Artificial Neural Networks](https://github.com/chiaseedss/climate-based-crop-yield-estimation) — A feedforward neural-network regression study estimating crop yield from four climate-related variables on synthetic agricultural data.
-- [Weather Application](https://github.com/chiaseedss/cccs106-projects/tree/main/mod6_labs/weather_app) — A Flet application that presents city/location weather, forecasts and search history through an asynchronous weather-service layer.
+| Project | Description |
+| --- | --- |
+| [Robopuff: Line Follower Robot](https://github.com/chiaseedss/robopuff-line-follower) | A collaborative Arduino project implementing rule-based steering from five digital line-sensor inputs. |
+| [Fuzzy Logic Obstacle Avoidance Robot](https://github.com/chiaseedss/fuzzy-obstacle-avoidance) | A collaborative robotics project exploring single-sensor and three-sensor ultrasonic obstacle avoidance with fuzzy decision logic. |
 
-## Academic Evidence and Attribution
+### Artificial Intelligence & Machine Learning
 
-The four Computer Vision projects retain their established descriptions, saved results, repository links and available demonstrations. Measurements are historical, not rerun benchmarks.
+| Project | Description |
+| --- | --- |
+| [Fashion-MNIST CNN Optimizer Comparison](https://github.com/chiaseedss/fashion-mnist-optimizer-comparison) | Compares SGD with momentum, Adam, and RMSProp using a shared CNN architecture for ten-class Fashion-MNIST classification. |
+| [Climate-Based Crop Yield Estimation](https://github.com/chiaseedss/climate-based-crop-yield-estimation) | Uses an artificial neural network to estimate crop yield from four climate-related variables on synthetic data, with documented regression results and limitations. |
 
-EduROOM retains its published team roles. Robotics contributors are Tischia Ann Olivares, Michelle Tercero and Rona Mae Quite; individual responsibilities remain undocumented. Farmers Market credits Sean Xander B. Aquino, Remar F. Malanon and Tischia Ann R. Olivares, with roles documented on its project page.
+### Software Development
 
-Fashion-MNIST and Crop Yield identify Olivares as sole author in their reports; the Weather lab documentation also identifies Olivares. No personal contact details or student identifiers are published.
+| Project | Description |
+| --- | --- |
+| [EduROOM Classroom Reservation System](https://github.com/tbhcoding/EduROOM) | A collaborative application for managing classroom reservations, availability, and scheduling. Team contributions are acknowledged in the project documentation. |
+| [Farmers Market Management System](https://github.com/chiaseedss/farmers-market-system) | A collaborative Flask/MySQL application for managing vendors, products, inventory, and orders, with customer purchasing and receipt workflows. |
+| [Weather Application](https://github.com/chiaseedss/cccs106-projects/tree/main/mod6_labs/weather_app) | A Flet application displaying current weather, forecasts, and search history through an asynchronous OpenWeatherMap service. |
 
-Crop Yield reports MAE 0.7285, RMSE 0.8594 and R² 0.3003 on synthetic data; fitting its scaler before splitting is retained as an important methodological limitation.
+## What You Can Explore
 
-## Exploring the Collection
+The portfolio is organized to make it easy to review each project’s:
 
-Use the academic-category buttons and keyword search together. Other Coursework selects Fashion-MNIST, Crop Yield and Weather; these projects also remain available under their academic disciplines. Only one category button is active at a time. Each card opens a detail page with implementation, findings, limitations, contributors and verified source links where available. Weather links directly to its existing module inside the CCCS106 repository. No duplicate Weather repository or source package is created. All eleven project entries link to verified public repositories or the exact existing project location.
+- **Overview and objectives:** The problem addressed and the purpose of the work.
+- **Methodology:** The tools, algorithms, datasets, and development approach used.
+- **Results and outputs:** Key findings, demonstrations, and relevant limitations.
+- **Source code and documentation:** Links to the individual GitHub repositories and their README files.
 
-## Photographs, Datasets and Privacy
+To explore, open the portfolio website, select a project, and follow its repository link for the available source code and supporting documentation. Academic-category filters and keyword search help you find projects by subject.
 
-Two actual robot photographs remain on cards and detail pages as optimized copies; original photographs are unchanged. The line-follower caption notes that its five-sensor array is not visible. Robot videos remain excluded pending sharing and participant permissions.
+## About This Repository
 
-Restricted images and datasets, API keys, .env files, location histories and private records remain excluded throughout the website.
+This repository contains the source code for the Learning Portfolio website. Individual project repositories are maintained separately so that their implementations and documentation can be reviewed independently. The Weather Application links to its existing project folder within the CCCS106 coursework repository.
 
-## Local Development and Pages
+The portfolio is a curated record of my academic work and will be updated as additional projects are completed and prepared for sharing. Collaborative work is identified as such, and datasets or third-party materials are linked or included according to applicable permissions. Reported measurements come from saved academic work; important methodological limitations are documented on the project pages.
 
-Requires Node.js 22.12+. Run `npm ci`, `npm run build`, `npm run validate` and `npm run dev`. Build before validating changed content because validation also inspects dist/.
+---
 
-The `/learning-portfolio/` base path, hash routes, responsive yellow theme and GitHub Actions Pages workflow are preserved. Only public-approved/ contributes public notes and photographs. Upload the final project data, filters, validation script, README and matching approved documentation together; remove stale excluded-project documentation from the website repository. Do not upload internal preparation files, backups, research datasets, repository packages, node_modules or build caches.
+*Learning through study, experimentation, and practical application.*
