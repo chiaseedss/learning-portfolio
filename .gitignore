@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+.env*
+*.log
+.npm-cache/
+.backups/
+
+# Internal audit files are excluded from publication.
+/public/
+asset_review.md
+publication_blockers.md
+repository_checklist.md
+validation_results.md
+*.pem
+*.key
