@@ -1,0 +1,266 @@
+[
+  {
+    "id": "traffic-signs",
+    "title": "Philippine traffic sign detection",
+    "domains": [
+      "Computer Vision",
+      "AI/ML"
+    ],
+    "technologies": [
+      "Python",
+      "Jupyter",
+      "Ultralytics YOLOv8n",
+      "PyTorch",
+      "OpenCV",
+      "Tkinter (referenced)"
+    ],
+    "methods": [
+      "YOLO-format bounding boxes mapped to five classes; training balanced to 605 images (121 per class).",
+      "YOLOv8n fine-tuned for 80 epochs at 640-pixel input size; fixed-threshold evaluation uses confidence 0.70 and NMS IoU 0.70.",
+      "Rule-based displayed suggestions accompany detected signs; no physical robot control."
+    ],
+    "features": [
+      "Five sign classes",
+      "Static-image and webcam workflow described",
+      "Threshold comparison",
+      "External-domain testing"
+    ],
+    "summary": "YOLOv8n detection of five Philippine traffic-sign classes, with validation and external-dataset evaluation.",
+    "results": [
+      "Notebook saved validation: 386 images, precision/recall/F1 0.997409 at confidence 0.70; mAP50 0.995; mAP50-95 0.854614.",
+      "Notebook saved external: 265 images, precision 0.865591, recall 0.607547, F1 0.713969; mAP50 0.731875; mAP50-95 0.52286."
+    ],
+    "limitations": [
+      "Additional modules, evaluation files and trained checkpoint referenced by the notebook are not included; the standalone webcam application is unavailable from the published files alone.",
+      "External-test recall is 0.6075, substantially below validation recall; results cover only five classes."
+    ],
+    "attribution": "Robopuff Girls: Agnote, Rovilyn Doroin, Ivy; Moico, Mary Joyce; Olivares, Tischia Ann (repository owner); Quite, Rona Mae; Tercero, Michelle. Names follow the published README.",
+    "concerns": [
+      "Team ownership needs confirmation (Robopuff report).",
+      "Roboflow and NSIT source licenses/citation unresolved; Ultralytics/model terms need review."
+    ],
+    "placement": "featured_conditional",
+    "kind": "project",
+    "status": "Academic prototype",
+    "evidence": "Historical saved artifacts and source inspection; not independently rerun.",
+    "categories": [
+      "Computer Vision & Digital Image Processing",
+      "Artificial Intelligence & Machine Learning"
+    ],
+    "repositoryUrl": "https://github.com/chiaseedss/philippine-traffic-sign-detection",
+    "sourceStatus": "Public repository verified on 23 October 2026.",
+    "documentationUrl": "./documentation/traffic-signs.md",
+    "course": null,
+    "datasetNote": "Roboflow training/validation images and a separate Road Signs test dataset. Exact source versions and links are not verified; dataset files are not redistributed.",
+    "demonstrationUrl": "https://drive.google.com/file/d/193ewY228nIQ413k8zm9QLgmNbJ_VDMAY/view?usp=drivesdk"
+  },
+  {
+    "id": "fish-ann",
+    "title": "Fish classification and image resolution experiment",
+    "domains": [
+      "Computer Vision",
+      "AI/ML"
+    ],
+    "technologies": [
+      "Python",
+      "TensorFlow/Keras",
+      "KaggleHub",
+      "scikit-learn",
+      "Seaborn"
+    ],
+    "methods": [
+      "Ground-truth masks excluded; inputs resized to 32×32, 64×64 and 128×128.",
+      "Flatten → Dense(256) → Dense(128) → softmax; 15 epochs for resolution comparisons.",
+      "Saved split counts: 7,200 training, 904 validation and 896 test images."
+    ],
+    "features": [
+      "Nine-class fish classification",
+      "Training-time comparison",
+      "Confusion matrix",
+      "Correct/incorrect examples"
+    ],
+    "summary": "Nine-class fish classification comparing three image resolutions using a dense neural network, rather than a CNN.",
+    "results": [
+      "32×32: comparison-loop accuracy 0.9364; training time 78.2 s.",
+      "64×64: accuracy 0.9163; training time 108.3 s.",
+      "128×128: accuracy 0.9152; training time 249.5 s.",
+      "Separate evaluation of the selected 32×32 model: accuracy 0.9375; distinct from its comparison-loop score."
+    ],
+    "limitations": [
+      "Confirm held-out split, near-duplicate leakage and correct correspondence between displayed metrics and resolution runs. Dataset downloaded externally; not bundled.",
+      "Validation dataset is subdivided using take/skip without explicit shuffle=False in directory loading; verify stable disjoint membership across iterations. Saved classification report formatting also needs cleanup."
+    ],
+    "attribution": "Tischia Ann R. Olivares — Individual Academic Project.",
+    "concerns": [
+      "Kaggle fish dataset licensing and derived image permissions unresolved."
+    ],
+    "placement": "featured_conditional",
+    "kind": "project",
+    "status": "Academic prototype",
+    "evidence": "Historical saved artifacts and source inspection; not independently rerun.",
+    "categories": [
+      "Computer Vision & Digital Image Processing",
+      "Artificial Intelligence & Machine Learning"
+    ],
+    "repositoryUrl": "https://github.com/chiaseedss/fish-classification-resolution-study",
+    "sourceStatus": "Public repository verified on 23 October 2026.",
+    "documentationUrl": "./documentation/fish-ann.md",
+    "course": null,
+    "datasetSources": [
+      {
+        "label": "A Large Scale Fish Dataset — Kaggle",
+        "url": "https://www.kaggle.com/datasets/crowww/a-large-scale-fish-dataset"
+      }
+    ],
+    "datasetNote": "Images are not redistributed. Dataset terms and image attribution require review."
+  },
+  {
+    "id": "image-compression",
+    "title": "Image compression and quality retention study",
+    "domains": [
+      "Computer Vision"
+    ],
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Pillow",
+      "scikit-image",
+      "pandas",
+      "Matplotlib"
+    ],
+    "methods": [
+      "Five images in each of four categories: graphics, photographs, text-based and high-resolution images.",
+      "JPEG/WebP quality 90, 70 and 50; PNG compression level 9.",
+      "Encoded size, time, PSNR and SSIM recorded in 140 historical observations."
+    ],
+    "features": [
+      "Size/latency/quality measurements",
+      "Multiple image categories",
+      "Before/after outputs"
+    ],
+    "summary": "Comparison of JPEG, WebP and PNG encoding across 20 images using size, encoding time, PSNR and SSIM.",
+    "results": [
+      "Historical mean SSIM: JPEG-90 0.983685; JPEG-70 0.960740; WebP-90 0.984870; WebP-70 0.961335; PNG 1.000000.",
+      "For g_1.png, JPEG-90 exceeds the input file size; encoding does not always reduce storage."
+    ],
+    "limitations": [
+      "The aggregate-summary code drops PNG rows with empty quality values, though PNG is present in the historical results table.",
+      "Encoding times depend on the original execution environment."
+    ],
+    "attribution": "Tischia Ann R. Olivares — Individual Academic Project.",
+    "concerns": [
+      "Image provenance/redistribution rights unconfirmed."
+    ],
+    "placement": "secondary",
+    "kind": "project",
+    "status": "Academic prototype",
+    "evidence": "Historical saved artifacts and source inspection; not independently rerun.",
+    "categories": [
+      "Computer Vision & Digital Image Processing"
+    ],
+    "repositoryUrl": "https://github.com/chiaseedss/image-compression-quality-study",
+    "sourceStatus": "Public repository verified on 23 October 2026.",
+    "documentationUrl": "./documentation/image-compression.md",
+    "course": null,
+    "datasetSources": [
+      {
+        "label": "Kodak test image collection",
+        "url": "https://r0k.us/graphics/kodak/index.html"
+      }
+    ],
+    "datasetNote": "Five photographic inputs were identified in the Kodak collection; detailed credits are in the repository README. Input images are excluded because applicable redistribution rights remain unresolved."
+  },
+  {
+    "id": "coin-edges",
+    "title": "Coin image preprocessing and edge detection",
+    "domains": [
+      "Computer Vision"
+    ],
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "NumPy",
+      "Matplotlib",
+      "Jupyter"
+    ],
+    "methods": [
+      "Grayscale conversion, 5×5 median filtering, 3×3 Gaussian smoothing, sharpening and Sobel X/Y gradients.",
+      "Gradient magnitudes combined and THRESH_TOZERO applied at 50 in code; notebook prose instead states 40."
+    ],
+    "features": [
+      "Step-by-step coin boundary visualization"
+    ],
+    "summary": "Classical image preprocessing and Sobel gradients for emphasizing coin boundaries; no denomination classification or automatic counting.",
+    "results": [
+      "Historical figures show intermediate filtering and edge-emphasis outputs. No accuracy, segmentation metric or coin-count benchmark was established."
+    ],
+    "limitations": [
+      "Single-image demonstration with manually selected parameters.",
+      "Threshold discrepancy between code (50) and prose (40) remains unresolved."
+    ],
+    "attribution": "Tischia Ann R. Olivares — Individual Academic Project.",
+    "concerns": [
+      "Remote Google Drive image provenance and access need review."
+    ],
+    "placement": "secondary",
+    "kind": "notebook",
+    "status": "Academic prototype",
+    "evidence": "Historical saved artifacts and source inspection; not independently rerun.",
+    "categories": [
+      "Computer Vision & Digital Image Processing"
+    ],
+    "repositoryUrl": "https://github.com/chiaseedss/coin-image-preprocessing",
+    "sourceStatus": "Public repository verified on 23 October 2026.",
+    "documentationUrl": "./documentation/coin-edges.md",
+    "course": "Digital Image Processing",
+    "datasetNote": "Original remote image provenance and redistribution permission are unresolved. No private image URL or sample image is included."
+  },
+  {
+    "id": "eduroom",
+    "title": "EduROOM classroom reservation system",
+    "domains": [
+      "Software Engineering"
+    ],
+    "technologies": [
+      "Python",
+      "Flet",
+      "MySQL",
+      "WebSockets",
+      "Microsoft Azure"
+    ],
+    "methods": [
+      "Python/Flet application with MySQL persistence and WebSocket updates.",
+      "Azure App Service hosting and cloud infrastructure, as documented by the team."
+    ],
+    "features": [
+      "Room availability and reservation tracking",
+      "Administrative approvals and role-based accounts",
+      "Real-time notifications"
+    ],
+    "summary": "Team-developed classroom reservation and scheduling application using Python, Flet, MySQL, WebSockets and Microsoft Azure.",
+    "results": [
+      "The published README documents reservation, approval, account-management and notification features. No quantitative performance benchmark is reported."
+    ],
+    "limitations": [
+      "Historical deployment is described in the README; current live application availability has not been verified."
+    ],
+    "attribution": "TechValks: Blessie Faith Bongalos — full-stack/backend; Tischia Ann Olivares — UI/UX, cloud engineering and Azure deployment; Renna Israel — documentation and reporting.",
+    "concerns": [
+      "TechValks team project. README credits Olivares as UI/UX and lead frontend engineer; shared data/integration and QA roles. Do not claim sole backend/full-stack authorship.",
+      "Profile photos, school identifiers, SQL seed/account data, activity logs and screenshots need privacy review.",
+      "Third-party photos/fonts and team publication consent unresolved."
+    ],
+    "placement": "secondary_highlight",
+    "kind": "project",
+    "status": "Academic prototype",
+    "evidence": "Historical saved artifacts and source inspection; not independently rerun.",
+    "categories": [
+      "Software Development"
+    ],
+    "repositoryUrl": "https://github.com/chiaseedss/EduROOM",
+    "sourceStatus": "Public repository verified on 23 October 2026.",
+    "documentationUrl": "./documentation/eduroom.md",
+    "course": null,
+    "demonstrationUrl": "https://youtu.be/2j4AlsXVCxc"
+  }
+]
